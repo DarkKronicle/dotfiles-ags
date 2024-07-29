@@ -1,0 +1,590 @@
+@mixin group-padding {
+    padding: 0.341rem;
+}
+
+.pane-right {
+    @include menu_decel;
+    @include elevation-border;
+    @include elevation2;
+    border-radius: $rounding_large - $elevation_margin + 0.068rem;
+    min-width: 27.818rem;
+    background-color: $background;
+    padding: 1.023rem;
+}
+
+.pane-left {
+    @include menu_decel;
+    @include elevation-border;
+    @include elevation2;
+    border-radius: $rounding_large - $elevation_margin + 0.068rem;
+    min-width: 27.818rem;
+    background-color: $background;
+    padding: 1.023rem;
+}
+
+.pane-group {
+    @include normal-rounding;
+    @include group-padding;
+    background-color: $layer1;
+}
+
+.pane-group-nopad {
+    @include normal-rounding;
+    background-color: $layer1;
+}
+
+.pane-group-invisible {
+    @include group-padding;
+}
+
+.pane-group-invisible-morehorizpad {
+    padding: 0.341rem 0.682rem;
+}
+
+.pane-togglesbox {
+    @include full-rounding;
+    @include group-padding;
+    background-color: $layer1;
+}
+
+.pane-iconbutton {
+    @include full-rounding;
+    @include element_decel;
+    color: $onSurface;
+    min-width: 2.727rem;
+    min-height: 2.727rem;
+}
+
+.pane-iconbutton:hover,
+.pane-iconbutton:focus {
+    background-color: $layer1Hover;
+}
+
+.pane-iconbutton:active {
+    background-color: $layer1Active;
+}
+
+.pane-button-active {
+    background-color: $primary;
+    color: $onPrimary;
+}
+
+.pane-button-active:hover,
+.pane-button-active:focus {
+    background-color: mix($primary, $layer1Hover, 70%);
+}
+
+.pane-button-active:active {
+    background-color: mix($primary, $layer1Active, 40%);
+}
+
+.pane-buttons-separator {
+    min-width: 0.068rem;
+    min-height: 0.068rem;
+    background-color: $onSurfaceVariant;
+}
+
+.pane-navrail {
+    padding: 0rem $rounding_medium;
+}
+
+.pane-navrail-btn>box>label {
+    @include full-rounding;
+    @include menu_decel;
+}
+
+.pane-navrail-btn:hover>box>label:first-child,
+.pane-navrail-btn:focus>box>label:first-child {
+    background-color: $layer1Hover;
+}
+
+.pane-navrail-btn:active>box>label:first-child {
+    background-color: $layer1Active;
+}
+
+.pane-navrail-btn-active>box>label:first-child {
+    background-color: $secondaryContainer;
+    color: $onSecondaryContainer;
+}
+
+.pane-navrail-btn-active:hover>box>label:first-child,
+.pane-navrail-btn-active:focus>box>label:first-child {
+    background-color: mix($secondaryContainer, $layer1Hover, 90%);
+    color: mix($onSecondaryContainer, $layer1Hover, 90%);
+}
+
+.pane-sysinfo-grouppad {
+    padding: 1.159rem;
+}
+
+.pane-memory-ram-circprog {
+    @include fluent_decel_long;
+    min-width: $rounding_small;
+    min-height: 4.091rem;
+    padding: 0.409rem;
+    background-color: $secondaryContainer;
+    color: $onSecondaryContainer;
+    font-size: 0px;
+}
+
+.pane-memory-swap-circprog {
+    @include fluent_decel_long;
+    min-width: $rounding_small;
+    min-height: 2.255rem;
+    padding: 0.409rem;
+    margin: 0.918rem;
+    background-color: $secondaryContainer;
+    color: $onSecondaryContainer;
+    font-size: 0px;
+}
+
+.pane-cpu-circprog {
+    min-width: $rounding_small;
+    min-height: 3.409rem;
+    padding: 0.409rem;
+    background-color: $secondaryContainer;
+    color: $onSecondaryContainer;
+    @include fluent_decel_long;
+    font-size: 0px;
+}
+
+.pane-scrollbar {
+    trough {
+        @include full-rounding;
+        min-width: 0.545rem;
+        background-color: transparent;
+    }
+
+    slider {
+        @include full-rounding;
+        @include element_decel;
+        min-width: 0.273rem;
+        min-height: 2.045rem;
+        background-color: transparentize($onSurfaceVariant, 0.7);
+    }
+
+    slider:hover,
+    slider:focus {
+        background-color: transparentize($onSurfaceVariant, 0.6);
+    }
+
+    slider:active {
+        background-color: transparentize($onSurface, 0.5);
+    }
+}
+
+.pane-calendar-btn {
+    @include full-rounding;
+    @include element_decel;
+    min-height: 2.523rem;
+    min-width: 2.523rem;
+    color: $onSurface;
+}
+
+.pane-calendar-btn:hover,
+.pane-calendar-btn:focus {
+    background-color: $hovercolor;
+}
+
+.pane-calendar-btn:active {
+    background-color: $activecolor;
+}
+
+.pane-calendar-btn-txt {
+    margin-left: -10.341rem;
+    margin-right: -10.341rem;
+}
+
+.pane-calendar-btn-today {
+    background-color: $primary;
+    color: $onPrimary;
+}
+
+.pane-calendar-btn-today:hover,
+.pane-calendar-btn-today:focus {
+    background-color: mix($primary, $hovercolor, 70%);
+}
+
+.pane-calendar-btn-today:active {
+    background-color: mix($primary, $hovercolor, 40%);
+}
+
+.pane-calendar-btn-othermonth {
+    color: $outline;
+}
+
+.pane-calendar-header {
+    margin: 0.341rem;
+}
+
+.pane-calendar-monthyear-btn {
+    @include full-rounding;
+    @include element_decel;
+    padding: 0rem 0.682rem;
+    background-color: $layer2;
+    color: $onSurface;
+}
+
+.pane-calendar-monthyear-btn:hover,
+.pane-calendar-monthyear-btn:focus {
+    background-color: $hovercolor;
+}
+
+.pane-calendar-monthyear-btn:active {
+    background-color: $activecolor;
+}
+
+.pane-calendar-monthshift-btn {
+    @include full-rounding;
+    @include element_decel;
+    min-width: 2.045rem;
+    min-height: 2.045rem;
+    background-color: $layer2;
+    color: $outline;
+}
+
+.pane-calendar-monthshift-btn:hover {
+    background-color: $hovercolor;
+}
+
+.pane-calendar-monthshift-btn:active {
+    background-color: $activecolor;
+}
+
+.pane-module {
+    @include normal-rounding;
+    @include group-padding;
+    background-color: $layer1;
+    padding: 0.682rem;
+}
+
+.pane-module-btn-arrow {
+    @include full-rounding;
+    @include icon-material;
+    background-color: $layer2;
+    min-width: 1.705rem;
+    min-height: 1.705rem;
+
+    &:hover,
+    &:focus {
+        background-color: $layer2Hover;
+    }
+
+    &:active {
+        background-color: $layer2Active;
+    }
+}
+
+.pane-module-scripts-button {
+    @include full-rounding;
+    @include icon-material;
+    background-color: $layer1;
+    min-width: 1.705rem;
+    min-height: 1.705rem;
+
+    &:hover,
+    &:focus {
+        background-color: $layer1Hover;
+    }
+
+    &:active {
+        background-color: $layer1Active;
+    }
+}
+
+$colorpicker_rounding: 0.341rem;
+
+.pane-module-colorpicker-wrapper {
+    padding: 0.341rem;
+}
+
+.pane-module-colorpicker-cursorwrapper {
+    padding: 0.341rem 0.136rem;
+}
+
+.pane-module-colorpicker-hue {
+    min-height: 13.636rem;
+    min-width: 1.091rem;
+    border-radius: $colorpicker_rounding;
+}
+
+.pane-module-colorpicker-hue-cursor {
+    background-color: $onBackground;
+    border: 0.136rem solid $onBackground;
+    min-height: 0.136rem;
+    margin-top: -0.136rem;
+    border-radius: $colorpicker_rounding;
+}
+
+.pane-module-colorpicker-saturationandlightness-wrapper {
+    padding: 0.341rem;
+}
+
+.pane-module-colorpicker-saturationandlightness {
+    min-height: 13.636rem;
+    min-width: 13.636rem;
+    border-radius: $colorpicker_rounding;
+}
+
+.pane-module-colorpicker-saturationandlightness-cursorwrapper {
+    padding: 0.341rem;
+    margin-top: -0.409rem;
+    margin-left: -0.409rem;
+}
+
+.pane-module-colorpicker-saturationandlightness-cursor {
+    @include full-rounding;
+    border: 0.136rem solid white;
+    min-width: 0.682rem;
+    min-height: 0.682rem;
+    margin-top: -0.409rem;
+    margin-left: -0.409rem;
+}
+
+.pane-module-colorpicker-result-area {
+    padding: 0.341rem;
+}
+
+.pane-module-colorpicker-result-box {
+    border-radius: $colorpicker_rounding;
+    min-width: 2.045rem;
+    min-height: 0.682rem;
+    padding: 0.341rem;
+}
+
+.pane-icontabswitcher {
+    @include full-rounding;
+    @include group-padding;
+    background-color: $layer1;
+}
+
+.pane-pin {
+    @include small-rounding;
+    @include element_decel;
+    min-height: 2.386rem;
+    min-width: 2.386rem;
+    color: $onSurface;
+}
+
+.pane-pin:hover,
+.pane-pin:focus {
+    background-color: $hovercolor;
+}
+
+.pane-pin:active {
+    background-color: $activecolor;
+}
+
+.pane-pin-enabled {
+    background-color: $primary;
+
+    label {
+        color: $onPrimary;
+    }
+}
+
+.pane-pin-enabled:hover,
+.pane-pin-enabled:focus {
+    background-color: mix($primary, $hovercolor, 70%);
+}
+
+.pane-pin-enabled:active {
+    background-color: mix($primary, $hovercolor, 40%);
+}
+
+.pane-waifu-heading {
+    @include titlefont;
+    padding: 0.341rem;
+    margin-left: -0.136rem;
+    padding-left: 0.818rem;
+}
+
+.pane-waifu-txt {
+    @include mainfont;
+}
+
+.pane-waifu-image {
+    @include normal-rounding;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.pane-waifu-image-actions {
+    @include element_decel;
+    padding: 0.313rem;
+}
+
+$waifu_image_overlay_transparency: 0.7;
+
+.pane-waifu-image-action {
+    @include full-rounding;
+    min-width: 1.875rem;
+    min-height: 1.875rem;
+    background-color: rgba(0, 0, 0, $waifu_image_overlay_transparency ); // Fixed cuz on image
+    color: rgba(255, 255, 255, $waifu_image_overlay_transparency);
+}
+
+.pane-waifu-image-action:hover,
+.pane-waifu-image-action:focus {
+    background-color: rgba(30, 30, 30, $waifu_image_overlay_transparency);
+}
+
+.pane-waifu-image-action:active {
+    background-color: rgba(60, 60, 60, $waifu_image_overlay_transparency);
+}
+
+.pane-booru-provider {
+    @include titlefont;
+    @include small-rounding;
+    padding: 0.341rem 0.818rem;
+    margin: 0.341rem;
+    font-weight: bold;
+    background-color: $primary;
+    color: $onPrimary;
+}
+
+.pane-booru-imagegrid {
+    @include normal-rounding;
+}
+
+.pane-booru-image {
+    @include small-rounding;
+    margin: 0.273rem;
+    min-width: 11.932rem;
+    // background-color: rgba(100, 200, 0, 0.3);
+}
+
+.pane-booru-image-drawingarea {
+    // background-color: rgba(200, 100, 0, 0.3);
+    @include small-rounding;
+    min-width: 12.273rem;
+    min-height: 12.273rem;
+}
+
+.pane-booru-image-actions {
+    // background-color: rgba(100, 100, 0, 0.3);
+    @include element_decel;
+    margin: 0.545rem;
+}
+
+.pane-volmixer-stream {
+    border-bottom: 0.068rem solid $outlineVariant;
+    padding: 0.682rem;
+    color: $onSurface;
+}
+
+.pane-volmixer-stream-appicon {
+    font-size: 3.273rem;
+}
+
+.pane-volmixer-stream-slider {
+    trough {
+        border-radius: $rounding_verysmall;
+        min-height: 1.364rem;
+        min-width: 1.364rem;
+        background-color: $secondaryContainer;
+    }
+
+    highlight {
+        border-radius: $rounding_verysmall;
+        min-height: 1.364rem;
+        min-width: 1.364rem;
+        background-color: $primary;
+    }
+
+    slider {
+        border-radius: $rounding_verysmall;
+        min-height: 1.364rem;
+        min-width: 1.364rem;
+    }
+}
+
+.pane-volmixer-status {
+    color: $onSurface;
+    margin: 0rem 0.682rem;
+}
+
+.pane-volmixer-deviceselector {
+    @include small-rounding;
+    padding: 0.477rem 0.682rem;
+    background-color: $surfaceContainerHigh;
+    color: $onSurfaceVariant;
+}
+
+.pane-bluetooth-device {
+    padding: 0.682rem;
+    @include normal-rounding;
+    background-color: $layer2;
+    color: $onLayer2;
+}
+
+.pane-bluetooth-appicon {
+    @include symbolic-icon;
+    font-size: 2.045rem;
+}
+
+.pane-bluetooth-device-remove {
+    @include full-rounding;
+    min-width: 2.045rem;
+    min-height: 2.045rem;
+    // background-color: $layer3;
+    padding: 0.341rem;
+}
+
+.pane-bluetooth-device-remove:hover,
+.pane-bluetooth-device-remove:focus {
+    @include full-rounding;
+    background-color: $layer2Hover;
+    padding: 0.341rem;
+}
+
+.pane-wifinetworks-network {
+    padding: 0.682rem;
+    @include normal-rounding;
+    background-color: $layer2;
+    color: $onLayer2;
+}
+
+.pane-wifinetworks-network:hover,
+.pane-wifinetworks-network:focus {
+    background-color: $layer2Hover;
+}
+
+.pane-wifinetworks-network:active {
+    background-color: $layer2Active;
+}
+
+.pane-wifinetworks-signal {
+    @include symbolic-icon;
+    font-size: 2.045rem;
+}
+
+.pane-wifinetworks-auth-entry {
+    @include small-rounding;
+    background-color: $layer1;
+    color: $onLayer1;
+    padding: 0.682rem;
+}
+
+.pane-centermodules-bottombar-button {
+    @include full-rounding;
+    @include element_decel;
+    min-width: 6.818rem;
+    min-height: 2.25rem;
+    background-color: $layer2;
+    color: $onLayer2;
+}
+
+.pane-centermodules-bottombar-button:hover,
+.pane-centermodules-bottombar-button:focus {
+    background-color: $layer2Hover;
+}
+
+.pane-centermodules-bottombar-button:active {
+    background-color: $layer2Active;
+}
+
+.pane-centermodules-scrollgradient-bottom {
+    background: linear-gradient(to top, $layer1 0%, transparentize($layer1, 1) 1.023rem);
+}

@@ -1,0 +1,28 @@
+*:not(popover) { all: unset; }
+
+
+@import 'mocha'; // Material colors
+@import 'cat_to_material'; // Material colors
+@import './colors'; // Global color definitions. Uses material colors as base.
+@import './lib_mixins';
+@import 'lib_mixins_overrides';
+@import './lib_classes';
+@import './common'; // Context menu n stuff
+
+@import './bar';
+@import './notifications';
+@import './panes';
+
+// Classes for interaction
+.growingRadial {
+    transition: 300ms cubic-bezier(0.2, 0.0, 0, 1.0);
+}
+.fadingRadial {
+    transition: 50ms cubic-bezier(0.2, 0.0, 0, 1.0);
+}
+.sidebar-pinned {
+    margin: 0rem;
+    border-radius: 0rem;
+    border-bottom-right-radius: $rounding_large;
+    border: 0rem solid;
+}
