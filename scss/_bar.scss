@@ -134,6 +134,7 @@ $bar_ws_width_focus_active: 2.045rem;
     font: normal 600 11pt "Recursive Mono Linear Static";
     // font-size: 11pt;
     color: $onSecondaryContainer;
+    margin-top: 10px;
 }
 
 .bar-clock-surround {
@@ -361,4 +362,11 @@ $bar_ws_width_focus_active: 2.045rem;
     min-width: 1.032rem;
     font-size: 1.032rem;
     padding: 0.205rem 0.341rem;
+}
+
+
+.bar-icon {
+  font-size: 1.77rem;
+  margin-top: 0.205rem;
+
 }

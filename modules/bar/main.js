@@ -1,5 +1,28 @@
 import Indicator from './components/indicator.js';
 import SwayWorkspaces from './components/sway.js';
+import Clock from "./components/clock.js";
+
+const topContent = () => {
+    var lastToggle = 0;
+    
+    return Widget.Box({
+        vertical: true,
+        children: [
+            Widget.EventBox({
+                onPrimaryClick: () => {
+                    const now = Date.now();
+                    const diff = now - lastToggle;
+                    if (diff > 50) {
+                        App.toggleWindow('paneleft')
+                    }
+                    lastToggle = now;
+                },
+                child: Clock(),
+            }),
+            SwayWorkspaces(),
+        ]
+    })
+}
 
 export const Bar = (/** @type {number} */ monitor) => {
     const SideModule = (children) => Widget.Box({
@@ -11,17 +34,11 @@ export const Bar = (/** @type {number} */ monitor) => {
     const barContent = Widget.CenterBox({
         className: 'bar-bg',
         vertical: true,
-        startWidget: SideModule([SwayWorkspaces()]),
+        startWidget: SideModule([topContent()]),
         endWidget: SideModule([Indicator()]),
-        centerWidget: Widget.EventBox({
-            vexpand: true,
-            onPrimaryClick: () => {
-                App.toggleWindow('paneleft')
-            },
-            css: "min-width: 2px;",
-            child: Widget.Label({ label: "HI" })
-        })
     });
+
+    var lastToggle = 0;
 
     return Widget.Window({
         monitor,

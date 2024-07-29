@@ -8,7 +8,6 @@ const { execAsync } = Utils;
 import Indicator from '../../../services/indicator.js';
 import { StatusIcons } from '../../common/statusicons.js';
 import { Tray } from "./tray.js";
-import Clock from "./clock.js";
 
 const SeparatorDot = () => Widget.Revealer({
     transition: 'slide_left',
@@ -30,9 +29,6 @@ const SeparatorDot = () => Widget.Revealer({
     ,
 });
 
-const clockEmptyArea = () => Widget.Box({
-    className: 'bar-clock-surround',
-});
 
 export default () => {
     var revealTray = Variable(false)
@@ -44,7 +40,9 @@ export default () => {
         className: 'bar-statusicons',
     });
     const TrayToggle = (child) => Widget.EventBox({
-        onPrimaryClick: () => revealTray.value = !revealTray.value,
+        onPrimaryClick: () => {
+            revealTray.value = !revealTray.value
+        },
         child: child,
     });
     const SpaceRightDefaultClicks = (child) => Widget.EventBox({
@@ -68,9 +66,6 @@ export default () => {
             barTray,
             TrayToggle(SeparatorDot()),
             SpaceRightDefaultClicks(barStatusIcons),
-            clockEmptyArea(), // Add just a bit of bottom padding
-            Clock(),
-            clockEmptyArea(), // Add just a bit of bottom padding
         ],
     });
 
